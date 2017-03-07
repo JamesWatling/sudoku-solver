@@ -1,8 +1,4 @@
-import {
-  parse_grid,
-  search
-} from 'shared/utils/sudoku'
-
+import { parse_grid, search } from 'shared/utils/sudoku'
 // limited testing because of external dependecy
 describe('Sudoku Util', () => {
   const grid = '4.....8.5.3..........7......2.....6.....8.4......1.......6.3.7.5..2.....1.4......'

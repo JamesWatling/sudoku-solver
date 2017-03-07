@@ -1,9 +1,6 @@
 import { connect } from 'react-redux'
 import Board from '../components/Board'
 
-const mapActionCreators = {
-}
-
 const mapStateToProps = (state) => {
   const { board } = state.game
 
@@ -12,7 +9,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapActionCreators
-)(Board)
+export default connect(mapStateToProps, {})(Board)

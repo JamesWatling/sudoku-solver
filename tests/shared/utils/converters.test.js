@@ -1,9 +1,4 @@
-import {
-  squaresToBoard,
-  boardToString,
-  fileStringToBoard
-} from 'shared/utils/converters'
-
+import { squaresToBoard, boardToString, fileStringToBoard } from 'shared/utils/converters'
 import { squares } from 'shared/utils/sudoku'
 import { fileString, solvedBoard } from '../../mocks'
 
@@ -12,7 +7,7 @@ describe('Converters Util', () => {
     expect(board.length).toBe(9)
     board.forEach((row) => {
       expect(row.length).toBe(9)
-      
+
       row.forEach((number) => {
         expect(typeof number).toBe('number')
       })

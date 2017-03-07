@@ -1,10 +1,16 @@
 import React from 'react'
 
-export class Solver extends React.Component {
+export default class Solver extends React.Component {
+
+  static propTypes = {
+    solveSudoku: React.PropTypes.func.isRequired
+  }
+
   handleOnClick = () => {
     const { solveSudoku } = this.props
     solveSudoku()
   }
+
   render () {
     return (
       <button onClick={this.handleOnClick}>
@@ -13,9 +19,3 @@ export class Solver extends React.Component {
     )
   }
 }
-
-Solver.propTypes = {
-  solveSudoku: React.PropTypes.func.isRequired
-}
-
-export default Solver

@@ -7,11 +7,4 @@ const mapActionCreators = {
   solveSudoku
 }
 
-const mapStateToProps = () => {
-  return {}
-}
-
-export default connect(
-  mapStateToProps,
-  mapActionCreators
-)(Solver)
+export default connect(null, mapActionCreators)(Solver)

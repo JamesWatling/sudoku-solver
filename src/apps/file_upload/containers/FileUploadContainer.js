@@ -1,18 +1,13 @@
 import { connect } from 'react-redux'
 import FileUpload from '../components/FileUpload'
-import {
-  uploadFile
-} from 'ducks/file_upload'
+import { uploadFile } from 'ducks/file_upload'
 
 const mapActionCreators = {
   uploadFile
 }
 
 const mapStateToProps = (state) => {
-  const {
-    uploading,
-    error
-  } = state.fileUpload
+  const { uploading, error } = state.fileUpload
 
   return {
     uploading,
@@ -20,7 +15,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapActionCreators
-)(FileUpload)
+export default connect(mapStateToProps, mapActionCreators)(FileUpload)

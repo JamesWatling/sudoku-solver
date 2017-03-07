@@ -1,9 +1,4 @@
-import {
-  constants,
-  actions,
-  initialState,
-  default as gameReducer
-} from 'ducks/game'
+import gameReducer, { constants, actions, initialState } from 'ducks/game'
 import { store, solvedBoard } from '../mocks'
 
 describe('Game Duck', () => {
@@ -16,7 +11,6 @@ describe('Game Duck', () => {
       expect(gameReducer(undefined, {})).toEqual(initialState)
     })
   })
-  
 
   describe('(Action) Set Board', () => {
     it('should declare constants correctly', () => {

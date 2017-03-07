@@ -1,22 +1,29 @@
 import React from 'react'
 
-export class Board extends React.Component {
-  renderBoard = () => {
+export default class Board extends React.Component {
+
+  static  propTypes = {
+    board: React.PropTypes.array.isRequired
+  }
+
+  renderBoard () {
     const { board } = this.props
 
-    return <table>
-      <tbody>
-        {board.map((row, index) => {
-          return <tr key={index}>
-            {row.map((number, index) => {
-              return <td key={index}>
-                {number}
-              </td>
-            })}
-          </tr>
-        })}
-      </tbody>
-    </table>
+    return (
+      <table>
+        <tbody>
+          {board.map((row, index) => {
+            return <tr key={index}>
+              {row.map((number, index) => {
+                return <td key={index}>
+                  {number}
+                </td>
+              })}
+            </tr>
+          })}
+        </tbody>
+      </table>
+    )
   }
 
   render () {
@@ -27,9 +34,3 @@ export class Board extends React.Component {
     )
   }
 }
-
-Board.propTypes = {
-  board: React.PropTypes.array.isRequired
-}
-
-export default Board

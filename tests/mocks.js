@@ -3,8 +3,8 @@ import thunk from 'redux-thunk'
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
-import { initialState as fileUpload } from 'ducks/file_upload'
-import { initialState as game } from 'ducks/game'
+import fileUpload from 'ducks/file_upload'
+import game from 'ducks/game'
 
 export const store = mockStore({ fileUpload, game })
 
